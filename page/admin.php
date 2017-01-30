@@ -180,7 +180,6 @@ else {
                 echo "<td>".$contact['date_naiss']."</td>";
                 echo "<td>".$contact['email']."</td>";
                 echo "<td>".$contact['jeux']."</td>";
-                // echo "<td>".$contact['image']."</td>";
                 echo '<td><div class="imgAdmin" style="background-image: url(../uploadFiles/'.$contact['image'].')"></div></td>';
                 echo "<td>";
                   echo "<div class='row'>";

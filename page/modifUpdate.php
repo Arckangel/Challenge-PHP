@@ -15,7 +15,7 @@ $email = isset($_POST['email'])? $_POST['email'] : '';
 $jeux = isset($_POST['jeux'])? $_POST['jeux'] : '';
 $image = $_FILES['userfile']['name'];
 
-$toverif = [preg_match("#^[^0-9].{1,29}#", $pseudo),
+$toverif = [preg_match("#^[^0-9].{1,29}$#", $pseudo),
             preg_match("#^[^0-9]{2,30}$#", $prenom),
             preg_match("#^[0-9]{1,2}[/.,-][0-9]{1,2}[/.,-][0-9]{4}$#", $date_naiss),
             preg_match("#^[a-zA-Z0-9\._-]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,5}$#", $email),

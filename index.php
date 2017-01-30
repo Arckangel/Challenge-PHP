@@ -137,36 +137,17 @@ session_start();
             <div class="col-lg-12">
                 <h2 class="page-header">Last creation</h2>
             </div>
-            <div class="portfolio-item col-md-4 col-sm-6">
-                <a href="page/repertory.html">
-                    <img class="img-responsive img-portfolio img-hover" src="img/portfolio1.jpg" alt="">
-                </a>
-            </div>
-            <div class="portfolio-item col-md-4 col-sm-6">
-                <a href="page/repertory.html">
-                    <img class="img-responsive img-portfolio img-hover" src="img/portfolio1.jpg" alt="">
-                </a>
-            </div>
-            <div class="portfolio-item col-md-4 col-sm-6">
-                <a href="page/repertory.html">
-                    <img class="img-responsive img-portfolio img-hover" src="img/portfolio1.jpg" alt="">
-                </a>
-            </div>
-            <div class="portfolio-item col-md-4 col-sm-6">
-                <a href="page/repertory.html">
-                    <img class="img-responsive img-portfolio img-hover" src="img/portfolio1.jpg" alt="">
-                </a>
-            </div>
-            <div class="portfolio-item col-md-4 col-sm-6">
-                <a href="page/repertory.html">
-                    <img class="img-responsive img-portfolio img-hover" src="img/portfolio1.jpg" alt="">
-                </a>
-            </div>
-            <div class="portfolio-item col-md-4 col-sm-6">
-                <a href="page/repertory.html">
-                    <img class="img-responsive img-portfolio img-hover" src="img/portfolio1.jpg" alt="">
-                </a>
-            </div>
+            <?php $res5 = mysqli_query($cnx,"SELECT * FROM contact WHERE valide=1 ORDER BY id DESC LIMIT 6");
+
+            while ($contact = mysqli_fetch_assoc($res5)) {
+              echo '
+              <div class="portfolio-item col-md-4 col-sm-6">
+                  <a href="page/repertory.php">
+                  <div class="imgRepertory" style="background-image: url(uploadFiles/'.$contact['image'].')"></div>
+                  </a>
+              </div>
+              ';
+            } ?>
         </div>
         <!-- /.row -->
 
